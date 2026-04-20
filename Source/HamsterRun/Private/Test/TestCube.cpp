@@ -22,10 +22,9 @@ void ATestCube::BeginPlay()
 void ATestCube::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	double speed = 20.f;
 	
 	auto loc = GetActorLocation();
-	loc.X += 10 * DeltaTime;
+	loc.X += speed * DeltaTime;
 	
 	SetActorLocation(loc);
 
