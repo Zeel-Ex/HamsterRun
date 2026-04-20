@@ -6,9 +6,9 @@
 #include "GameMapsSettings.h"
 #include "GameFramework/GameMode.h"
 #include "GameFramework/InputDeviceSubsystem.h"
-#include "Interfaces/CI_InputConnection.h"
+#include "Interfaces/InputConnection.h"
 
-bool UExtendedGameInstance::userHardwareIsGamepad(FPlatformUserId UserId)
+bool UExtendedGameInstance::UserHardwareIsGamepad(FPlatformUserId UserId)
 {
 	UInputDeviceSubsystem* ids = UInputDeviceSubsystem::Get();
 		
@@ -31,7 +31,7 @@ void UExtendedGameInstance::Init()
 	UE_LOG(LogTemp, Warning, TEXT("Users: %i"), users.Num());
 	for (FPlatformUserId user : users)
 	{
-		if (userHardwareIsGamepad(user))
+		if (UserHardwareIsGamepad(user))
 		{
 			UserToDeviceMap.Add(user, UInputDeviceSubsystem::Get()->GetMostRecentlyUsedInputDeviceId(user));
 			UE_LOG(LogTemp, Warning, TEXT("Game pad: %i"), user.GetInternalId());
@@ -55,13 +55,13 @@ void UExtendedGameInstance::OnInputDeviceConnectionChanged(EInputDeviceConnectio
 	{
 	case EInputDeviceConnectionState::Connected:
 		{
-			if (userHardwareIsGamepad(UserId))
+			if (UserHardwareIsGamepad(UserId))
 			{
 				UE_LOG(LogTemp, Warning, TEXT("Player Connected"));
 				AGameModeBase* gM = GetWorld()->GetAuthGameMode<AGameModeBase>();
 				if (gM)
 				{
-					ICI_InputConnection::Execute_OnGamepadConnected(gM, UserId, DeviceId);
+					IInputConnection::Execute_OnGamepadConnected(gM, UserId, DeviceId);
 				}
 			
 				UserToDeviceMap.Add(UserId, DeviceId);
@@ -79,7 +79,7 @@ void UExtendedGameInstance::OnInputDeviceConnectionChanged(EInputDeviceConnectio
 				{
 					if (const FPlatformUserId* correctedUserId = UserToDeviceMap.FindKey(DeviceId))
 					{
-						ICI_InputConnection::Execute_OnGamepadDisconnected(gM, *correctedUserId, DeviceId);
+						IInputConnection::Execute_OnGamepadDisconnected(gM, *correctedUserId, DeviceId);
 					}
 				}
 			}

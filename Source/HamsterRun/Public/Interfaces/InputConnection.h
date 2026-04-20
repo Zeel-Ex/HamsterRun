@@ -4,11 +4,11 @@
 
 #include "CoreMinimal.h"
 #include "UObject/Interface.h"
-#include "CI_InputConnection.generated.h"
+#include "InputConnection.generated.h"
 
 // This class does not need to be modified.
 UINTERFACE(MinimalAPI)
-class UCI_InputConnection : public UInterface
+class UInputConnection : public UInterface
 {
 	GENERATED_BODY()
 };
@@ -16,7 +16,7 @@ class UCI_InputConnection : public UInterface
 /**
  * 
  */
-class HAMSTERRUN_API ICI_InputConnection
+class HAMSTERRUN_API IInputConnection
 {
 	GENERATED_BODY()
 

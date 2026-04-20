@@ -37,5 +37,5 @@ private:
 		FPlatformUserId          UserId,
 		FInputDeviceId           DeviceId);
 	
-	static bool userHardwareIsGamepad(FPlatformUserId UserId);
+	static bool UserHardwareIsGamepad(FPlatformUserId UserId);
 };
