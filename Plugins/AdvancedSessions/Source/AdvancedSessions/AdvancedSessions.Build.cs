@@ -14,7 +14,7 @@ public class AdvancedSessions : ModuleRules
         PublicDefinitions.Add("WITH_ADVANCED_SESSIONS=1");
 
        // PrivateIncludePaths.AddRange(new string[] { "AdvancedSessions/Private"/*, "OnlineSubsystemSteam/Private"*/ });
-       // PublicIncludePaths.AddRange(new string[] { "AdvancedSessions/Public" });
+		PublicIncludePaths.AddRange(new string[] { "AdvancedSessions/Classes" });
         PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "OnlineSubsystem", "CoreUObject", "OnlineSubsystemUtils", "Networking", "Sockets"/*"Voice", "OnlineSubsystemSteam"*/ });
     }
 }
