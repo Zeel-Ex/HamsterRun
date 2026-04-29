@@ -8,7 +8,7 @@ public class HamsterRun : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "ApplicationCore", "EngineSettings" });
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "ApplicationCore", "EngineSettings", "AdvancedSessions" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 

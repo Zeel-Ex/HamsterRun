@@ -75,3 +75,4 @@ Plugins/**/Intermediate/*
 DerivedDataCache/*
 .idea
 /HamsterRun.uproject.DotSettings.user
+/*.user

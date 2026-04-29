@@ -5,20 +5,21 @@
 #include "CoreMinimal.h"
 #include "Engine/GameInstance.h"
 #include "Engine/LocalPlayer.h"
+#include "AdvancedFriendsGameInstance.h"
 
 #include "ExtendedGameInstance.generated.h"
 /**
  * 
  */
 UCLASS()
-class HAMSTERRUN_API UExtendedGameInstance : public UGameInstance
+class HAMSTERRUN_API UExtendedGameInstance : public UAdvancedFriendsGameInstance
 {
 	GENERATED_BODY()
 	
 public:
 	virtual void Init() override;
 	virtual void Shutdown() override;
-
+	
 	TMap<FPlatformUserId, FInputDeviceId> GetUserToDeviceMap() const { return UserToDeviceMap; }
 	
 	UFUNCTION(BlueprintCallable)
