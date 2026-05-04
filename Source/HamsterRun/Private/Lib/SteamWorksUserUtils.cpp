@@ -8,24 +8,6 @@ USteamWorksUserUtils::USteamWorksUserUtils()
 {
 }
 
-UTexture2D* USteamWorksUserUtils::GetSteamAvatar(const FString& SteamID64)
-{
-	if (!SteamFriends()) return nullptr;
-
-	// Convert the SteamID64 string to a uint64
-	uint64 SteamID = FCString::Strtoui64(*SteamID64, nullptr, 10);
-
-	// Get the Steam avatar image
-	uint32 AvatarSize = 0;
-	int AvatarHandle = SteamFriends()->GetLargeFriendAvatar(SteamID);
-	if (AvatarHandle == -1)
-	{
-		return nullptr; // Failed to get avatar handle
-	}
-
-	return RenderToTexture(AvatarHandle);
-}
-
 bool USteamWorksUserUtils::ProfileColor(UTexture2D* avatar, FLinearColor& outColor)
 {
 	if (!avatar || !avatar->GetPlatformData() || avatar->GetPlatformData()->Mips.Num() == 0)
@@ -113,16 +95,4 @@ UTexture2D* USteamWorksUserUtils::RenderToTexture(int Image)
 
 	Texture->UpdateResource();
 	return Texture;
-}
-
-void USteamWorksUserUtils::OnAvatarLoaded(AvatarImageLoaded_t* imageLoadedCb)
-{
-	if (!imageLoadedCb) return;
-
-	int Image = imageLoadedCb->m_iImage;
-
-	if (UTexture2D* avatar = RenderToTexture(Image))
-	{
-		OnAvatarLoadedDelegate.Broadcast(avatar, LexToString(imageLoadedCb->m_steamID.ConvertToUint64()));
-	}
 }
