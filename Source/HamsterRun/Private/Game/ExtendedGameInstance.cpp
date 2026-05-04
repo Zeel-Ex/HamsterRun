@@ -18,9 +18,12 @@ bool UExtendedGameInstance::UserHardwareIsGamepad(FPlatformUserId UserId)
 
 void UExtendedGameInstance::Init()
 {
-
 	Super::Init();
 
+	// init
+	steamWorksUserUtils = NewObject<USteamWorksUserUtils>(this);
+	
+	// Input mapping
 	IPlatformInputDeviceMapper& platformInputDeviceMapper = IPlatformInputDeviceMapper::Get();
 
 	platformInputDeviceMapper.GetOnInputDeviceConnectionChange()
