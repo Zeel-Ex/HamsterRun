@@ -20,4 +20,7 @@ public:
 	
 	UFUNCTION(BlueprintImplementableEvent)
 	void OnPlayerStateChanged(APlayerState* NewPlayerState);
+	
+	UPROPERTY(BlueprintAssignable)
+	FOnPlayerStateChanged OnPlayerStateChangedDelegate;
 };

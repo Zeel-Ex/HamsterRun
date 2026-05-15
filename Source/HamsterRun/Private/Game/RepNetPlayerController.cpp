@@ -8,4 +8,5 @@ void ARepNetPlayerController::OnRep_PlayerState()
 	Super::OnRep_PlayerState();
 	
 	OnPlayerStateChanged(PlayerState);
+	OnPlayerStateChangedDelegate.Broadcast(PlayerState);
 }
