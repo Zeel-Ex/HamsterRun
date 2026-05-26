@@ -76,3 +76,8 @@ DerivedDataCache/*
 .idea
 /HamsterRun.uproject.DotSettings.user
 /*.user
+
+# FMOD Studio temporary files
+**/FMODProj/.user/
+**/FMODProj/.unsaved/.user/
+**/FMODProj/.cache/
