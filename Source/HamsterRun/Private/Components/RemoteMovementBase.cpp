@@ -27,9 +27,9 @@ void URemoteMovementBase::TickComponent(float DeltaTime, ELevelTick TickType, FA
 	
 }
 
-CurrentNetMode URemoteMovementBase::GetCurrentNetMode() const
+CurrentNetMode URemoteMovementBase::GetCurrentNetMode(const UObject* WorldContextObject)
 {
-	if (const UWorld* World = GetWorld())
+	if (const UWorld* World = WorldContextObject->GetWorld())
 	{
 		return static_cast<CurrentNetMode>(World->GetNetMode());
 	}

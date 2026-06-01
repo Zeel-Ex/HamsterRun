@@ -8,10 +8,25 @@ public class HamsterRun : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "ApplicationCore", "EngineSettings", "AdvancedSessions" });
+		PublicDependencyModuleNames.AddRange(new string[]
+		{
+			"Core", 
+			"CoreUObject", 
+			"Engine", 
+			"InputCore", 
+			"ApplicationCore", 
+			"EngineSettings", 
+			"AdvancedSessions", 
+			"OnlineSubsystem", 
+			"OnlineSubsystemSteam", 
+			"Steamworks", 
+			"AssetTools",
+			"UMG"
+		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 
+		//PrivateIncludePaths.Add("ThirdParty/Steamworks/Steamv161/sdk/public");
 		// Uncomment if you are using Slate UI
 		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
 		
