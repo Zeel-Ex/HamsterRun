@@ -6,6 +6,7 @@
 #include "Engine/GameInstance.h"
 #include "Engine/LocalPlayer.h"
 #include "AdvancedFriendsGameInstance.h"
+#include "Lib/SteamWorksUserUtils.h"
 
 #include "ExtendedGameInstance.generated.h"
 /**
@@ -29,6 +30,10 @@ public:
 		UserToDeviceMap.GetKeys(keys);
 		return keys;
 	};
+	
+	//vars
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	TObjectPtr<USteamWorksUserUtils> steamWorksUserUtils;
 	
 private:
 	TMap<FPlatformUserId, FInputDeviceId> UserToDeviceMap;
