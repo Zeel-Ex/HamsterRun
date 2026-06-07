@@ -17,11 +17,10 @@ public class HamsterRun : ModuleRules
 			"ApplicationCore", 
 			"EngineSettings", 
 			"AdvancedSessions", 
-			"OnlineSubsystem", 
 			"OnlineSubsystemSteam", 
-			"Steamworks", 
-			"AssetTools",
-			"UMG"
+			"Steamworks",
+			"UMG",
+			"Slate"
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
