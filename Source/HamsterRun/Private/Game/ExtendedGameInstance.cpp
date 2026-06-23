@@ -40,6 +40,8 @@ void UExtendedGameInstance::Init()
 			UE_LOG(LogTemp, Warning, TEXT("Game pad: %i"), user.GetInternalId());
 		}
 	}
+	
+	FSlateApplication::Get().SetAllUserFocusToGameViewport();
 }
 
 void UExtendedGameInstance::Shutdown()

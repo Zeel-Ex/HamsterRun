@@ -3,22 +3,31 @@
 
 #include "Lib/BaseUtils.h"
 
-#include "IAssetTools.h"
 #include "Engine/TextureRenderTarget2D.h"
 
 UTexture2D* UBaseUtils::GetTextureRenderTarget(UTextureRenderTarget2D* RTarget)
 {
-	if (!RTarget->IsValidLowLevel()) return nullptr;
-	
-	FString Name;
-	FString PackageName;
-	IAssetTools::Get().CreateUniqueAssetName(RTarget->GetOutermost()->GetName(), TEXT("_Tex"), PackageName, Name);
+	if (!RTarget || !RTarget->IsValidLowLevel()) return nullptr;
 
-	UTexture2D* Texture2D = RTarget->ConstructTexture2D(CreatePackage(*PackageName), Name, RTarget->GetMaskedFlags(), CTF_Default);
-	RTarget->CompressionSettings = TextureCompressionSettings::TC_VectorDisplacementmap;
-#if WITH_EDITORONLY_DATA
-	Texture2D->MipGenSettings = TextureMipGenSettings::TMGS_NoMipmaps;
-#endif
+	UTexture2D* Texture2D = UTexture2D::CreateTransient(
+		RTarget->SizeX,
+		RTarget->SizeY,
+		RTarget->GetFormat()
+	);
+
+	if (!Texture2D) return nullptr;
+
+	// Read pixels from the render target
+	TArray<FColor> Pixels;
+	FRenderTarget* RenderTarget = RTarget->GameThread_GetRenderTargetResource();
+	RenderTarget->ReadPixels(Pixels);
+
+	// Write into the texture
+	FTexture2DMipMap& Mip = Texture2D->GetPlatformData()->Mips[0];
+	void* Data = Mip.BulkData.Lock(LOCK_READ_WRITE);
+	FMemory::Memcpy(Data, Pixels.GetData(), Pixels.Num() * sizeof(FColor));
+	Mip.BulkData.Unlock();
+
 	Texture2D->SRGB = 1;
 	Texture2D->UpdateResource();
 
