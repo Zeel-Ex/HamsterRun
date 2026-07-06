@@ -33,3 +33,16 @@ UTexture2D* UBaseUtils::GetTextureRenderTarget(UTextureRenderTarget2D* RTarget)
 
 	return Texture2D;
 }
+
+FString UBaseUtils::GetAppVersion()
+{
+	FString AppVersion;
+	GConfig->GetString(
+		TEXT("/Script/EngineSettings.GeneralProjectSettings"),
+		TEXT("ProjectVersion"),
+		AppVersion,
+		GGameIni
+	);
+
+	return AppVersion;
+}

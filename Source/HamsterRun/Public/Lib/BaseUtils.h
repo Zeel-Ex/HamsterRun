@@ -17,4 +17,7 @@ class HAMSTERRUN_API UBaseUtils : public UBlueprintFunctionLibrary
 public:
 	UFUNCTION(BlueprintCallable, Category = "Texture")
 	static UTexture2D* GetTextureRenderTarget(UTextureRenderTarget2D* RTarget);
+	
+	UFUNCTION(BlueprintPure, meta = (DisplayName = "GetAppVersion"), Category = "Game Config")
+	static FString GetAppVersion();
 };

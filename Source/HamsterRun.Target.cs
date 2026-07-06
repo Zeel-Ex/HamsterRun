@@ -11,5 +11,14 @@ public class HamsterRunTarget : TargetRules
 		DefaultBuildSettings = BuildSettingsVersion.V6;
 
 		ExtraModuleNames.AddRange( new string[] { "HamsterRun" } );
+		
+		if (Target.Platform == UnrealTargetPlatform.Win64)
+		{
+			PreBuildSteps.Add("\"$(ProjectDir)\\Scripts\\update_version.bat\" \"$(ProjectDir)\"");
+		}
+		else
+		{
+			PreBuildSteps.Add("bash \"$(ProjectDir)/Scripts/update_version.sh\" \"$(ProjectDir)\"");
+		}
 	}
 }
