@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.03.00">
 	<object class="Event" id="{59cdf3af-55c8-4a2d-a416-cbb50ccebce2}">
+		<property name="color">
+			<value>Red</value>
+		</property>
 		<property name="name">
 			<value>Jump</value>
 		</property>
@@ -114,6 +117,7 @@
 		</property>
 		<relationship name="parameters">
 			<destination>{05dc2ebd-97c1-49ae-aee8-15168d83b52e}</destination>
+			<destination>{b53fcb26-296d-4ddd-95ad-ffe8e0d2fd92}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{dfb5e034-f449-4bea-a926-b63af3934e00}</destination>
@@ -150,6 +154,11 @@
 	<object class="ParameterProperty" id="{05dc2ebd-97c1-49ae-aee8-15168d83b52e}">
 		<relationship name="parameter">
 			<destination>{5f9c8434-1cbb-47b8-a4e9-efdbadb2e213}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterProperty" id="{b53fcb26-296d-4ddd-95ad-ffe8e0d2fd92}">
+		<relationship name="parameter">
+			<destination>{60252c72-4878-4052-8a3d-59f2d75c41ff}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{d09932f6-fbe2-4fb6-bf56-060a7eb34e31}">

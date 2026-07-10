@@ -9,6 +9,9 @@
 3 = ending, stress level 3 finish theme
 </value>
 		</property>
+		<property name="color">
+			<value>Yellow</value>
+		</property>
 		<property name="name">
 			<value>LevelMusic</value>
 		</property>

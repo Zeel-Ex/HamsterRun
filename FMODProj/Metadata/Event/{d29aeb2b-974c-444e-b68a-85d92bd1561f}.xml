@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.03.00">
 	<object class="Event" id="{d29aeb2b-974c-444e-b68a-85d92bd1561f}">
+		<property name="color">
+			<value>Yellow</value>
+		</property>
 		<property name="name">
 			<value>Moving</value>
 		</property>
@@ -238,7 +241,14 @@
 	</object>
 	<object class="MixerBusPanner" id="{bcd430e5-d96f-4344-b310-e936de2df99b}" />
 	<object class="MixerBusFader" id="{d8753939-43e3-4fe7-9dd4-7cf48d17c0a5}" />
-	<object class="SpatialiserEffect" id="{6e19e29b-9fad-4a93-8634-ad9b526efa0b}" />
+	<object class="SpatialiserEffect" id="{6e19e29b-9fad-4a93-8634-ad9b526efa0b}">
+		<property name="panBlend">
+			<value>0.349999994</value>
+		</property>
+		<property name="userPanExtent">
+			<value>60</value>
+		</property>
+	</object>
 	<object class="AutomationCurve" id="{ac3ef99e-918c-488b-9079-d4934077b1d7}">
 		<relationship name="parameter">
 			<destination>{e67d73d7-c992-4546-88ce-0cfdb472e3c0}</destination>
