@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="Event" id="{a762f520-5d68-420e-902b-2c17af9c416e}">
 		<property name="color">
-			<value>Red</value>
+			<value>Green</value>
 		</property>
 		<property name="name">
 			<value>Use</value>
@@ -93,10 +93,13 @@
 	<object class="MixerBusPanner" id="{9136455f-3135-46df-85e9-a58de3dab86f}" />
 	<object class="EventSound" id="{7169f075-4e1e-4927-8833-dcc5e8483f97}">
 		<property name="length">
-			<value>2</value>
+			<value>0.32077502691065674</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{ac6c1c7b-64f8-4c1a-a595-79c88adb9168}</destination>
+		</relationship>
+		<relationship name="parameters">
+			<destination>{2aea04c8-3412-4083-ab67-8221044c7439}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{9b15f6eb-ed52-4d90-afb5-9996b6cac30e}</destination>
@@ -130,6 +133,11 @@
 		<property name="amount">
 			<value>6</value>
 		</property>
+	</object>
+	<object class="ParameterProperty" id="{2aea04c8-3412-4083-ab67-8221044c7439}">
+		<relationship name="parameter">
+			<destination>{f11700c9-4d3c-46db-9813-3688694e301f}</destination>
+		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{7f9b3ca0-62c1-4282-982c-4a45fc755956}">
 		<relationship name="effects">
