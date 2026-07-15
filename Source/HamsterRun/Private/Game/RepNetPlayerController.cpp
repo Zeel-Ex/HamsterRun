@@ -10,3 +10,9 @@ void ARepNetPlayerController::OnRep_PlayerState()
 	OnPlayerStateChanged(PlayerState);
 	OnPlayerStateChangedDelegate.Broadcast(PlayerState);
 }
+
+void ARepNetPlayerController::PostSeamlessTravel()
+{
+	Super::PostSeamlessTravel();
+	OnPostSeamlessTravel();
+}
