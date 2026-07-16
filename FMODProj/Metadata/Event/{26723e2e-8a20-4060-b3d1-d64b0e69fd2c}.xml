@@ -107,6 +107,7 @@
 		</property>
 		<relationship name="parameters">
 			<destination>{d84fab9d-8682-454a-a59d-330adfb3e055}</destination>
+			<destination>{e8fb3495-007f-41fa-aa31-2e336f045ad9}</destination>
 		</relationship>
 		<relationship name="event">
 			<destination>{9b15f6eb-ed52-4d90-afb5-9996b6cac30e}</destination>
@@ -163,6 +164,11 @@
 	<object class="ParameterProperty" id="{d84fab9d-8682-454a-a59d-330adfb3e055}">
 		<relationship name="parameter">
 			<destination>{f11700c9-4d3c-46db-9813-3688694e301f}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterProperty" id="{e8fb3495-007f-41fa-aa31-2e336f045ad9}">
+		<relationship name="parameter">
+			<destination>{d15e38e2-59da-4fae-892b-d15f4ed1340b}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{6241cd48-4d82-462c-8f72-1a773e72e9d5}">

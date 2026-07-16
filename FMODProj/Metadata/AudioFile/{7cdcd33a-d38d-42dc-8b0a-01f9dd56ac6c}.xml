@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.03.00">
-	<object class="AudioFile" id="{5200df17-4e7a-4341-9c2d-7317e3afc1b4}">
+	<object class="AudioFile" id="{7cdcd33a-d38d-42dc-8b0a-01f9dd56ac6c}">
 		<property name="assetPath">
-			<value>SFX/Player/Actions/GrabRelease/Player_Grab.wav</value>
+			<value>SFX/Items/Sword/ToySword_Impact_2.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
@@ -11,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>0.43364583333333334</value>
+			<value>0.425875</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{37974f91-9881-424d-b412-518a3b83c3c8}</destination>
