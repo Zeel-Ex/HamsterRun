@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="Event" id="{be5db1e9-4744-44d4-8c6c-9637322d2cb3}">
 		<property name="color">
-			<value>Red</value>
+			<value>Green</value>
 		</property>
 		<property name="name">
 			<value>Use</value>
@@ -73,9 +73,6 @@
 		</relationship>
 	</object>
 	<object class="GroupTrack" id="{76748fa6-8812-41c1-96f0-0b6f196ba868}">
-		<relationship name="modules">
-			<destination>{a778402e-011d-4c51-93c8-079f25029a3a}</destination>
-		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{7d3be8fd-ba8f-4c3d-bb2f-de591f7224ed}</destination>
 		</relationship>
@@ -89,7 +86,6 @@
 		<relationship name="modules">
 			<destination>{9a58891f-4696-482b-893a-b96cc08e374a}</destination>
 			<destination>{7828c32a-0e86-4b1e-813d-7c8c68880b4e}</destination>
-			<destination>{a778402e-011d-4c51-93c8-079f25029a3a}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{b57e3bda-2dc9-439c-90a9-94e08a2ad1ff}">
@@ -144,17 +140,6 @@
 		</relationship>
 		<relationship name="output">
 			<destination>{b57e3bda-2dc9-439c-90a9-94e08a2ad1ff}</destination>
-		</relationship>
-	</object>
-	<object class="CommandSound" id="{a778402e-011d-4c51-93c8-079f25029a3a}">
-		<property name="start">
-			<value>1.0403723425726588</value>
-		</property>
-		<property name="length">
-			<value>0.125</value>
-		</property>
-		<relationship name="commandTarget">
-			<destination>{6713ce4b-8363-46ae-b9b8-9e502157db09}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{7d3be8fd-ba8f-4c3d-bb2f-de591f7224ed}">

@@ -24,6 +24,9 @@
 			<value>Throw</value>
 			<value>Push</value>
 		</property>
+		<property name="isHeld">
+			<value>true</value>
+		</property>
 		<property name="initialValue">
 			<value>0</value>
 		</property>
