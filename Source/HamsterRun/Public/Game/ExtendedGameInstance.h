@@ -54,7 +54,12 @@ public:
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, meta = (WorldContext = "WorldContextObject"))
 	static UExtendedGameInstance* GetExtendedGameInstance(const UObject* WorldContextObject);
-	static bool UserHardwareIsGamepad(FPlatformUserId UserId);
+	
+	UFUNCTION(BlueprintCallable)
+	int RemoveAdditionalLocalPlayers();
+	
+	static bool UserHardwareIsGamepad(FInputDeviceId DeviceId);
+	
 	void OnGamepadConnectionChanged(EInputDeviceConnectionState NewState, FPlatformUserId UserId,
 	                                FInputDeviceId DeviceId);
 

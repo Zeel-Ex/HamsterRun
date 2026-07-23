@@ -30,15 +30,14 @@ void UExtendedGameInstance::Init()
 	PlatformInputDeviceMapper.GetOnInputDeviceConnectionChange()
 							 .AddUObject(this, &UExtendedGameInstance::OnGamepadConnectionChanged);
 	
-	TArray<FPlatformUserId> users;
-	PlatformInputDeviceMapper.GetAllActiveUsers(users);
-	UE_LOG(LogTemp, Warning, TEXT("Users: %i"), users.Num());
-	for (FPlatformUserId user : users)
+	TArray<FInputDeviceId> InputDevices;
+	PlatformInputDeviceMapper.GetAllConnectedInputDevices(InputDevices);
+	UE_LOG(LogTemp, Warning, TEXT("Input Devices: %i"), InputDevices.Num());
+	for (const FInputDeviceId& Device : InputDevices)
 	{
-		if (UserHardwareIsGamepad(user))
+		if (UserHardwareIsGamepad(Device))
 		{
-			UserToDeviceMap.Add(UInputDeviceSubsystem::Get()->GetMostRecentlyUsedInputDeviceId(user), user);
-			UE_LOG(LogTemp, Warning, TEXT("Game pad: %i"), user.GetInternalId());
+			UserToDeviceMap.Add(Device, PlatformInputDeviceMapper.GetUserForInputDevice(Device));
 		}
 	}
 	
@@ -63,16 +62,35 @@ UExtendedGameInstance* UExtendedGameInstance::GetExtendedGameInstance(const UObj
 	return nullptr;
 }
 
-bool UExtendedGameInstance::UserHardwareIsGamepad(FPlatformUserId UserId)
+int UExtendedGameInstance::RemoveAdditionalLocalPlayers()
 {
-	UInputDeviceSubsystem* ids = UInputDeviceSubsystem::Get();
+	int RemovedCount = 0;
+	
+	if (LocalPlayers.Num() > 1)
+		{
+			for (int i = LocalPlayers.Num() - 1; i > 0; --i)
+			{
+				if (ULocalPlayer* PlayerToRemove = LocalPlayers[i]; PlayerToRemove != GetFirstGamePlayer())
+				{
+					RemoveLocalPlayer(PlayerToRemove);
+					++RemovedCount;
+				}
+			}
+		}
+	
+	return RemovedCount;
+}
+
+bool UExtendedGameInstance::UserHardwareIsGamepad(FInputDeviceId DeviceId)
+{
+	UInputDeviceSubsystem* Ids = UInputDeviceSubsystem::Get();
 		
-	FHardwareDeviceIdentifier ident = ids->GetMostRecentlyUsedHardwareDevice(UserId);
+	FHardwareDeviceIdentifier ident = Ids->GetInputDeviceHardwareIdentifier(DeviceId);
 	return (ident.PrimaryDeviceType == EHardwareDevicePrimaryType::Gamepad);
 }
 
-void UExtendedGameInstance::OnGamepadConnectionChanged(EInputDeviceConnectionState NewState, FPlatformUserId UserId,
-														   FInputDeviceId DeviceId)
+void UExtendedGameInstance::OnGamepadConnectionChanged(EInputDeviceConnectionState NewState, const FPlatformUserId UserId,
+														   const FInputDeviceId DeviceId)
 {
 	switch (NewState)
 	{
@@ -91,12 +109,14 @@ void UExtendedGameInstance::OnGamepadConnectionChanged(EInputDeviceConnectionSta
 			break;
 		}
 	case EInputDeviceConnectionState::Connected:
-		if (UserHardwareIsGamepad(UserId))
 		{
-			UE_LOG(LogTemp, Warning, TEXT("OnGamepadConnectionChanged: %i, %i, %i"), (int)NewState, UserId.GetInternalId(), DeviceId.GetId());
-			UserToDeviceMap.Add(DeviceId, UserId);
-			OnGamepadConnectionChangedEvent.Broadcast(NewState, UserId, DeviceId);
+			if (UserHardwareIsGamepad(DeviceId))
+			{
+				UE_LOG(LogTemp, Warning, TEXT("OnGamepadConnectionChanged: %i, %i, %i"), (int)NewState, UserId.GetInternalId(), DeviceId.GetId());
+				UserToDeviceMap.Add(DeviceId, UserId);
+				OnGamepadConnectionChangedEvent.Broadcast(NewState, UserId, DeviceId);
+			}
+			break;
 		}
-		break;
 	}
 }

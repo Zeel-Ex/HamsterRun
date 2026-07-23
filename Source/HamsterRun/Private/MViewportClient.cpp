@@ -5,9 +5,13 @@
 
 void UMViewportClient::EnableListenForInput(bool bEnable)
 { 
+	if (bListenForLocalPlayerInput == bEnable)
+		return; // noop to guard against double calls
+	
 	bListenForLocalPlayerInput = bEnable;
-	UE_LOG(LogTemp, Warning, TEXT("EnableLostenfidejbfhhbd"));
-
+	
+	UE_LOG(LogTemp, Warning, TEXT("EnableListenForInput: %s"), bEnable ? TEXT("true") : TEXT("false"));
+	
 	if (!bListenForLocalPlayerInput)
 	{
 		// Stop listening: restore the previous handler
@@ -18,7 +22,7 @@ void UMViewportClient::EnableListenForInput(bool bEnable)
 	{
 		// Start listening: store the current handler so we can call it later
 		CachedInputKeyHandler = OnOverrideInputKey();
-        
+		UE_LOG(LogTemp, Warning, TEXT("Starting to listen for input"));
 		// Bind our custom function to intercept all key inputs
 		OnOverrideInputKey().BindUObject(this, &ThisClass::OnAnyInputKeyEvent);
 	}
