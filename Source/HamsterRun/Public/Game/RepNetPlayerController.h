@@ -26,6 +26,9 @@ public:
 	
 	UPROPERTY(BlueprintAssignable)
 	FOnPlayerStateChanged OnPlayerStateChangedDelegate;
-
-	virtual void ReceivedPlayer() override;
+	
+        virtual void PostSeamlessTravel() override;
+    
+        UFUNCTION(BlueprintImplementableEvent, Category = "Seamless Travel")
+        void OnPostSeamlessTravel();
 };
