@@ -31,4 +31,6 @@ public:
     
         UFUNCTION(BlueprintImplementableEvent, Category = "Seamless Travel")
         void OnPostSeamlessTravel();
+	
+	virtual void ReceivedPlayer() override;
 };

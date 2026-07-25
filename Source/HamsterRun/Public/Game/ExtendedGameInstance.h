@@ -62,6 +62,11 @@ public:
 	
 	void OnGamepadConnectionChanged(EInputDeviceConnectionState NewState, FPlatformUserId UserId,
 	                                FInputDeviceId DeviceId);
+	
+	FTimerHandle GamepadRecheckTimerHandle;
+	
+	void CheckGamepadHardware(EInputDeviceConnectionState NewState, const FPlatformUserId UserId,
+														   const FInputDeviceId DeviceId);
 
 private:
 	TMap<FInputDeviceId, FPlatformUserId> UserToDeviceMap;

@@ -86,10 +86,23 @@ bool UExtendedGameInstance::UserHardwareIsGamepad(FInputDeviceId DeviceId)
 	UInputDeviceSubsystem* Ids = UInputDeviceSubsystem::Get();
 		
 	FHardwareDeviceIdentifier ident = Ids->GetInputDeviceHardwareIdentifier(DeviceId);
+	
+	UE_LOG(LogTemp, Warning, TEXT("UserHardwareGamepadType: %i"), ident.PrimaryDeviceType);
+	
 	return (ident.PrimaryDeviceType == EHardwareDevicePrimaryType::Gamepad);
 }
 
 void UExtendedGameInstance::OnGamepadConnectionChanged(EInputDeviceConnectionState NewState, const FPlatformUserId UserId,
+														   const FInputDeviceId DeviceId)
+{
+	GetTimerManager().SetTimer(GamepadRecheckTimerHandle, [this, DeviceId, UserId, NewState]()
+{
+	CheckGamepadHardware(NewState, UserId, DeviceId);
+}, 1.0f, false);
+	
+}
+
+void UExtendedGameInstance::CheckGamepadHardware(EInputDeviceConnectionState NewState, const FPlatformUserId UserId,
 														   const FInputDeviceId DeviceId)
 {
 	switch (NewState)
