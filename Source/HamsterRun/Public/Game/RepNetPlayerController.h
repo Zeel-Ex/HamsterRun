@@ -21,6 +21,11 @@ public:
 	UFUNCTION(BlueprintImplementableEvent)
 	void OnPlayerStateChanged(APlayerState* NewPlayerState);
 	
+	UFUNCTION(BlueprintImplementableEvent)
+	void OnPlayerReceived();
+	
 	UPROPERTY(BlueprintAssignable)
 	FOnPlayerStateChanged OnPlayerStateChangedDelegate;
+
+	virtual void ReceivedPlayer() override;
 };
