@@ -21,6 +21,9 @@ public:
 	UFUNCTION(BlueprintImplementableEvent)
 	void OnPlayerStateChanged(APlayerState* NewPlayerState);
 	
+	UFUNCTION(BlueprintImplementableEvent)
+	void OnPlayerReceived();
+	
 	UPROPERTY(BlueprintAssignable)
 	FOnPlayerStateChanged OnPlayerStateChangedDelegate;
 	
@@ -28,4 +31,6 @@ public:
     
         UFUNCTION(BlueprintImplementableEvent, Category = "Seamless Travel")
         void OnPostSeamlessTravel();
+	
+	virtual void ReceivedPlayer() override;
 };

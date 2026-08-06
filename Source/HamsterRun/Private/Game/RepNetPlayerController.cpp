@@ -16,3 +16,9 @@ void ARepNetPlayerController::PostSeamlessTravel()
 	Super::PostSeamlessTravel();
 	OnPostSeamlessTravel();
 }
+
+void ARepNetPlayerController::ReceivedPlayer()
+{
+	APlayerController::ReceivedPlayer(); 
+	OnPlayerReceived();
+};

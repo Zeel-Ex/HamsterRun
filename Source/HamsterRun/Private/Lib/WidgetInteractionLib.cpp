@@ -5,6 +5,7 @@
 
 #include "Blueprint/SlateBlueprintLibrary.h"
 #include "Blueprint/UserWidget.h"
+#include "Blueprint/WidgetBlueprintLibrary.h"
 #include "Blueprint/WidgetLayoutLibrary.h"
 
 UUserWidget* UWidgetInteractionLib::GetNearestWidget(TArray<UUserWidget*> Widgets, const FVector2D& InteractionLocation,
@@ -42,4 +43,23 @@ UUserWidget* UWidgetInteractionLib::GetNearestWidget(TArray<UUserWidget*> Widget
 	}
 
 	return NearestWidget;
+}
+
+void UWidgetInteractionLib::RemoveAllWidgetsFromController(APlayerController* PlayerController, TSubclassOf<UUserWidget> WidgetClass, UObject* WorldContextObject)
+{
+	TArray<UUserWidget*> Widgets;
+	
+	UWidgetBlueprintLibrary::GetAllWidgetsOfClass(WorldContextObject, Widgets, WidgetClass, false);
+	
+	for (auto It = Widgets.CreateIterator(); It; ++It)
+	{
+		if (!(*It))
+			return;
+		
+		if (PlayerController == (*It)->GetOwningPlayer())
+		{
+			(*It)->RemoveFromParent();
+			It.RemoveCurrent();
+		}
+	}
 }
