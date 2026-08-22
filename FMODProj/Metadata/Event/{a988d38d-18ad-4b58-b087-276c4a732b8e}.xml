@@ -5,7 +5,7 @@
 			<value>Green</value>
 		</property>
 		<property name="name">
-			<value>Confirm</value>
+			<value>UI_Confirm</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>

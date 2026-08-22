@@ -5,7 +5,7 @@
 			<value>Yellow</value>
 		</property>
 		<property name="name">
-			<value>Hurt</value>
+			<value>Player_Grunt_Hurt</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>

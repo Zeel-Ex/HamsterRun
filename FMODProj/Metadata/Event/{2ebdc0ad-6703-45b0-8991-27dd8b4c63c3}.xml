@@ -5,7 +5,7 @@
 			<value>Green</value>
 		</property>
 		<property name="name">
-			<value>Deny</value>
+			<value>UI_Deny</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>

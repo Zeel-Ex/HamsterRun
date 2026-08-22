@@ -5,7 +5,7 @@
 			<value>Yellow</value>
 		</property>
 		<property name="name">
-			<value>Use</value>
+			<value>Sword_Use</value>
 		</property>
 		<property name="outputFormat">
 			<value>5</value>

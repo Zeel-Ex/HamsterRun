@@ -5,7 +5,7 @@
 			<value>Green</value>
 		</property>
 		<property name="name">
-			<value>Drink</value>
+			<value>Player_Move_Drink</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>

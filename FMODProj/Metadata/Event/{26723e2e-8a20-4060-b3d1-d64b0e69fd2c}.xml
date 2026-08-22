@@ -5,7 +5,7 @@
 			<value>Yellow</value>
 		</property>
 		<property name="name">
-			<value>Throw</value>
+			<value>Player_Move_Throw</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
@@ -129,7 +129,7 @@
 	</object>
 	<object class="EventSound" id="{38cbc6fc-ecf6-483a-bad4-6e81f25d3af2}">
 		<property name="length">
-			<value>2</value>
+			<value>0.3176458333333334</value>
 		</property>
 		<relationship name="parameters">
 			<destination>{540cd8cf-9194-41cd-b990-8efd929ac93e}</destination>

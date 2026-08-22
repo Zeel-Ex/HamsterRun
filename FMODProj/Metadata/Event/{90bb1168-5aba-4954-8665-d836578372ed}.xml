@@ -5,7 +5,7 @@
 			<value>Green</value>
 		</property>
 		<property name="name">
-			<value>Move</value>
+			<value>UI_Move</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>

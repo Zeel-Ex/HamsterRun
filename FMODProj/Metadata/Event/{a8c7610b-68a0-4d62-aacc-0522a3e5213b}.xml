@@ -5,7 +5,7 @@
 			<value>Red</value>
 		</property>
 		<property name="name">
-			<value>Impact</value>
+			<value>Ledder_Impact</value>
 		</property>
 		<property name="outputFormat">
 			<value>0</value>

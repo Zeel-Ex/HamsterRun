@@ -5,7 +5,7 @@
 			<value>Green</value>
 		</property>
 		<property name="name">
-			<value>Engine</value>
+			<value>RC_Engine</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
