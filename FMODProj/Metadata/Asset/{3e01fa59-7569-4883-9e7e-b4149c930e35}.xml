@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.03.00">
-	<object class="EncodableAsset" id="{88e229de-b7cd-4a4e-92eb-767749bfa7af}">
+	<object class="EncodableAsset" id="{3e01fa59-7569-4883-9e7e-b4149c930e35}">
 		<property name="assetPath">
-			<value>SFX/Moderator/Barks/</value>
+			<value>SFX/Moderator/Countdown/</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{37974f91-9881-424d-b412-518a3b83c3c8}</destination>

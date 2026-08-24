@@ -16,7 +16,7 @@
 			<value>1</value>
 		</property>
 		<property name="maximum">
-			<value>101</value>
+			<value>90</value>
 		</property>
 		<property name="isHeld">
 			<value>true</value>
