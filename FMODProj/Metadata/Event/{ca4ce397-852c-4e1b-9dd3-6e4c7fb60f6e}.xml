@@ -72,7 +72,11 @@
 			<destination>{c3777bcf-0c83-45da-9f6c-b984e082c8ae}</destination>
 		</relationship>
 	</object>
-	<object class="Timeline" id="{b3b71203-6d0f-4047-9422-bf3701274643}" />
+	<object class="Timeline" id="{b3b71203-6d0f-4047-9422-bf3701274643}">
+		<property name="isProxyEnabled">
+			<value>false</value>
+		</property>
+	</object>
 	<object class="ParameterProxy" id="{cfedfcbc-49aa-48a3-888d-f99d464ed8f8}">
 		<relationship name="modules">
 			<destination>{c2e8ede4-4fed-466c-884d-25c8520a37a8}</destination>
@@ -102,12 +106,18 @@
 	</object>
 	<object class="MixerBusPanner" id="{f081bb41-aa23-4e79-ad08-0329455c91be}" />
 	<object class="MultiSound" id="{c2e8ede4-4fed-466c-884d-25c8520a37a8}">
+		<property name="isCutoff">
+			<value>true</value>
+		</property>
 		<relationship name="sounds">
 			<destination>{d0865bb6-d067-4458-bc54-0d7951429072}</destination>
 			<destination>{d0bfd82f-5c5e-4f3a-878d-0ee00b6a0941}</destination>
 		</relationship>
 	</object>
 	<object class="MultiSound" id="{d8abc684-15d1-4ea6-86a4-ceb306bd9d2d}">
+		<property name="isCutoff">
+			<value>true</value>
+		</property>
 		<property name="start">
 			<value>1</value>
 		</property>
@@ -117,6 +127,9 @@
 		</relationship>
 	</object>
 	<object class="MultiSound" id="{eed90114-409d-4ace-a0be-1cd9f882fb4a}">
+		<property name="isCutoff">
+			<value>true</value>
+		</property>
 		<property name="start">
 			<value>3</value>
 		</property>
@@ -126,6 +139,9 @@
 		</relationship>
 	</object>
 	<object class="MultiSound" id="{575ca70f-a1a1-4722-bbc0-2ea9cf7fbc69}">
+		<property name="isCutoff">
+			<value>true</value>
+		</property>
 		<property name="start">
 			<value>2</value>
 		</property>
