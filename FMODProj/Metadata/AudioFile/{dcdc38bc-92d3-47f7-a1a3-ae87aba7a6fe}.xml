@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.03.00">
-	<object class="AudioFile" id="{ad7b480a-649d-485a-9fdc-ba748a3197c0}">
+	<object class="AudioFile" id="{dcdc38bc-92d3-47f7-a1a3-ae87aba7a6fe}">
 		<property name="assetPath">
-			<value>SFX/Items/TuffGun/Dart_HitGround_4.wav</value>
+			<value>SFX/Items/TuffGun/Dart_HitGround_2.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
@@ -11,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>1.0511666666666666</value>
+			<value>1.2057500000000001</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{37974f91-9881-424d-b412-518a3b83c3c8}</destination>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.03.00">
-	<object class="AudioFile" id="{9625a75a-0bec-4f9e-9261-3657bf7b0139}">
+	<object class="AudioFile" id="{57a8d33a-6236-4263-9d19-2e7eb2740968}">
 		<property name="assetPath">
 			<value>SFX/Items/TuffGun/Dart_HitGround_5.wav</value>
 		</property>
