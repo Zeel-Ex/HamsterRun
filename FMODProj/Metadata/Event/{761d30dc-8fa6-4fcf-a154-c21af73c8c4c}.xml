@@ -1020,7 +1020,7 @@
 			<value>110.55043750000002</value>
 		</property>
 		<property name="length">
-			<value>9.6000000000000085</value>
+			<value>9.544129071294492</value>
 		</property>
 		<property name="quantizationInterval">
 			<value>12</value>
@@ -1083,10 +1083,10 @@
 	</object>
 	<object class="TransitionRegion" id="{3d05bea9-bf9a-493a-9548-9c8c742e135b}">
 		<property name="position">
-			<value>129.81756278999893</value>
+			<value>129.6945665712945</value>
 		</property>
 		<property name="length">
-			<value>9.6000000000000085</value>
+			<value>9.7229962187044663</value>
 		</property>
 		<property name="quantizationInterval">
 			<value>12</value>
@@ -1123,10 +1123,10 @@
 	</object>
 	<object class="TransitionRegion" id="{2d5b3fc0-02d6-465a-a059-064050180250}">
 		<property name="position">
-			<value>139.47208720434628</value>
+			<value>139.41756278999895</value>
 		</property>
 		<property name="length">
-			<value>9.6000000000000085</value>
+			<value>9.5721052199805143</value>
 		</property>
 		<property name="quantizationInterval">
 			<value>12</value>
@@ -1166,7 +1166,7 @@
 			<value>148.98966800997948</value>
 		</property>
 		<property name="length">
-			<value>9.6000000000000085</value>
+			<value>9.5607694900205189</value>
 		</property>
 		<property name="quantizationInterval">
 			<value>12</value>
