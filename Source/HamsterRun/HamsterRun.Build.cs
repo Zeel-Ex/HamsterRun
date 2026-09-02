@@ -23,6 +23,6 @@ public class HamsterRun : ModuleRules
 			"Slate"
 		});
 
-		PrivateDependencyModuleNames.AddRange(new string[] {  });
+		PrivateDependencyModuleNames.AddRange(new string[] { "MoviePlayer" });
 	}
 }

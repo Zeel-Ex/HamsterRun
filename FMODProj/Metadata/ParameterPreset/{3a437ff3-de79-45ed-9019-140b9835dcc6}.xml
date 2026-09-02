@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{3a437ff3-de79-45ed-9019-140b9835dcc6}">
+		<property name="name">
+			<value>Headshot</value>
+		</property>
+		<relationship name="folder">
+			<destination>{de856b5e-9e94-4d8d-817d-64d7e60cb317}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{c9168cc3-6d56-43ea-835a-6fc67487d22f}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{c9168cc3-6d56-43ea-835a-6fc67487d22f}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="isHeld">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
