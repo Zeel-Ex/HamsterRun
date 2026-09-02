@@ -5,7 +5,7 @@
 			<value>Green</value>
 		</property>
 		<property name="name">
-			<value>Use</value>
+			<value>Pan_Use</value>
 		</property>
 		<property name="outputFormat">
 			<value>5</value>
@@ -56,7 +56,7 @@
 			<destination>{9136455f-3135-46df-85e9-a58de3dab86f}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{4d00b564-e915-4a0c-a3d9-5ff34d465380}</destination>
+			<destination>{c0a2380d-2f6b-4269-8734-46ed21409a84}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{7a8f4f34-50e9-4e8b-81ec-d9b42654e4ed}" />

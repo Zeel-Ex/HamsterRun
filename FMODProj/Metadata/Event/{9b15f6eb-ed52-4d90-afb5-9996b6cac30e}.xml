@@ -5,7 +5,7 @@
 			<value>Yellow</value>
 		</property>
 		<property name="name">
-			<value>Swing</value>
+			<value>Player_Move_Swing</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
@@ -65,7 +65,7 @@
 			<destination>{4abca983-dfbb-4f53-bf00-23e10fb753e5}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{4d00b564-e915-4a0c-a3d9-5ff34d465380}</destination>
+			<destination>{c0a2380d-2f6b-4269-8734-46ed21409a84}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{474dcd35-dd7b-449f-986b-c14c6d5cde3d}" />

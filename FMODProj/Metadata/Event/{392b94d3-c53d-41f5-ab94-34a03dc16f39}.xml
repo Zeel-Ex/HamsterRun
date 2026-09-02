@@ -5,7 +5,7 @@
 			<value>Yellow</value>
 		</property>
 		<property name="name">
-			<value>Use</value>
+			<value>Sword_Use</value>
 		</property>
 		<property name="outputFormat">
 			<value>5</value>
@@ -57,7 +57,7 @@
 			<destination>{a86fb1e9-04ff-404b-947e-25b22795ca8e}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{4d00b564-e915-4a0c-a3d9-5ff34d465380}</destination>
+			<destination>{c0a2380d-2f6b-4269-8734-46ed21409a84}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{43be26cd-4398-48ed-9f85-487775c8cc62}" />

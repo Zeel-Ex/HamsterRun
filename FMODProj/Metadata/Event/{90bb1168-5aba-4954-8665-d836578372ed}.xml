@@ -5,7 +5,7 @@
 			<value>Green</value>
 		</property>
 		<property name="name">
-			<value>Move</value>
+			<value>UI_Move</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -62,7 +62,7 @@
 			<destination>{3d159fc0-1fcd-42ba-a341-e6e46c46cdd2}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{4d00b564-e915-4a0c-a3d9-5ff34d465380}</destination>
+			<destination>{c0a2380d-2f6b-4269-8734-46ed21409a84}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{e3829d29-9976-46b5-b86e-90e352fe2763}" />
