@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="EncodableAsset" id="{4611acc8-b11b-4461-852c-88e5e3cc073e}">
+		<property name="assetPath">
+			<value>SFX/Items/Stickyhand/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{37974f91-9881-424d-b412-518a3b83c3c8}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{a32f4942-7545-4a2e-a170-77f6ffad274b}">
+		<property name="assetPath">
+			<value>SFX/Items/Pan/FryingPan_Impact_3.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.1943125000000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{37974f91-9881-424d-b412-518a3b83c3c8}</destination>
+		</relationship>
+	</object>
+</objects>
