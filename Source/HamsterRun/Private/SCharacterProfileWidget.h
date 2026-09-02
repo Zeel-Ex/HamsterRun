@@ -6,8 +6,6 @@
 #include "Widgets/SCompoundWidget.h"
 #include "Widgets/DeclarativeSyntaxSupport.h"
 
-#include "SCharacterProfileWidget.generated.h"
-
 class SCharacterProfileWidget : public SCompoundWidget
 {
 public:
@@ -29,7 +27,7 @@ public:
 
 SLATE_END_ARGS()
 
-	TSharedRef<SCharacterProfileWidget> ConstructRandom();
+	static TSharedRef<SCharacterProfileWidget> ConstructRandom();
 	
 void Construct(const FArguments& InArgs);
 };

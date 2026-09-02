@@ -71,7 +71,7 @@ TSharedRef<SCharacterProfileWidget> SCharacterProfileWidget::ConstructRandom()
 		.CharacterJob(randomChar.CharacterJob)
 		.CharacterName(randomChar.CharacterName)
 		// General Widget
-		.BackgroundBrush(new FSlateImageBrush())
+		.BackgroundBrush(new FSlateColorBrush(FLinearColor::Yellow));
 }
 
 void SCharacterProfileWidget::Construct(const FArguments& InArgs)

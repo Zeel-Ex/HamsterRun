@@ -152,7 +152,7 @@ void UExtendedGameInstance::OnPreLoadMap(const FString& MapName)
 	{
 		FLoadingScreenAttributes LoadingScreen;
 		LoadingScreen.bAutoCompleteWhenLoadingCompletes = false;
-		LoadingScreenWidget = SNew(SCharacterProfileWidget);
+		LoadingScreenWidget = SCharacterProfileWidget::ConstructRandom();
 		LoadingScreen.WidgetLoadingScreen = LoadingScreenWidget;
 		LoadingScreen.MinimumLoadingScreenDisplayTime = 2.0f;
 		GetMoviePlayer()->SetupLoadingScreen(LoadingScreen);
@@ -174,6 +174,6 @@ void UExtendedGameInstance::OnSeamlessTravelStart(UWorld* CurrentWorld, const FS
 	if (IsRunningDedicatedServer())
 		return;
 	
-	LoadingScreenWidget = SNew(SCharacterProfileWidget);
+	LoadingScreenWidget = SCharacterProfileWidget::ConstructRandom();
 	GEngine->GameViewport->AddViewportWidgetContent(LoadingScreenWidget.ToSharedRef(), 1000);
 }
