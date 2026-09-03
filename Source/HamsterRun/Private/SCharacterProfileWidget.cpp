@@ -71,7 +71,7 @@ TSharedRef<SCharacterProfileWidget> SCharacterProfileWidget::ConstructRandom()
 		.CharacterJob(randomChar.CharacterJob)
 		.CharacterName(randomChar.CharacterName)
 		// General Widget
-		.BackgroundBrush(new FSlateColorBrush(FLinearColor::Yellow));
+		.BackgroundBrush(new FSlateColorBrush(FColor::FromHex("fdf1cb")));
 }
 
 void SCharacterProfileWidget::Construct(const FArguments& InArgs)
@@ -101,6 +101,7 @@ void SCharacterProfileWidget::Construct(const FArguments& InArgs)
 					SNew(STextBlock)
 					.Text(TextAttr)
 					.Justification(ETextJustify::Center)
+					.ColorAndOpacity(FColor::FromHex("2B2B2B"))
 				]
 			];
 	};
@@ -211,6 +212,7 @@ void SCharacterProfileWidget::Construct(const FArguments& InArgs)
 								SNew(STextBlock)
 								.Text(InArgs._CharacterDescription)
 								.AutoWrapText(true)
+								.ColorAndOpacity(FColor::FromHex("2B2B2B"))
 							]
 						]
 					]
@@ -226,6 +228,7 @@ void SCharacterProfileWidget::Construct(const FArguments& InArgs)
 		[
 			SNew(SCircularThrobber)
 			.Visibility(InArgs._LoadingVisibility)
+			.ColorAndOpacity(FLinearColor{43, 43, 43, 255 })
 		]
 	];
 }
