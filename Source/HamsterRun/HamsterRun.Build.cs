@@ -20,9 +20,10 @@ public class HamsterRun : ModuleRules
 			"OnlineSubsystemSteam", 
 			"Steamworks",
 			"UMG",
-			"Slate"
+			"Slate",
+			"SlateCore"
 		});
 
-		PrivateDependencyModuleNames.AddRange(new string[] {  });
+		PrivateDependencyModuleNames.AddRange(new string[] { "MoviePlayer" });
 	}
 }

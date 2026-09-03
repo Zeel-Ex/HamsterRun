@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{7cb93d82-ab52-42cb-84f2-d8be82956e87}">
+		<property name="name">
+			<value>CartSpeed</value>
+		</property>
+		<relationship name="folder">
+			<destination>{de856b5e-9e94-4d8d-817d-64d7e60cb317}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{e67d73d7-c992-4546-88ce-0cfdb472e3c0}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{e67d73d7-c992-4546-88ce-0cfdb472e3c0}">
+		<property name="maximum">
+			<value>100</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

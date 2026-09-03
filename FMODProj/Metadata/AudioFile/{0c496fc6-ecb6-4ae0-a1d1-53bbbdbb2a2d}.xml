@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+<<<<<<<< HEAD:FMODProj/Metadata/AudioFile/{3611a169-bdf4-4ad0-b059-58137076eaaf}.xml
+	<object class="AudioFile" id="{3611a169-bdf4-4ad0-b059-58137076eaaf}">
+		<property name="assetPath">
+			<value>SFX/UI/UI_Stab_3_Deny.wav</value>
+========
+	<object class="AudioFile" id="{0c496fc6-ecb6-4ae0-a1d1-53bbbdbb2a2d}">
+		<property name="assetPath">
+			<value>SFX/Moderator/Stunned/A_Row63.mp3</value>
+>>>>>>>> 6d10174bad277ef4390f02ec7655ec025e7c268e:FMODProj/Metadata/AudioFile/{0c496fc6-ecb6-4ae0-a1d1-53bbbdbb2a2d}.xml
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+<<<<<<<< HEAD:FMODProj/Metadata/AudioFile/{3611a169-bdf4-4ad0-b059-58137076eaaf}.xml
+			<value>0.57143750000000004</value>
+========
+			<value>3.984</value>
+>>>>>>>> 6d10174bad277ef4390f02ec7655ec025e7c268e:FMODProj/Metadata/AudioFile/{0c496fc6-ecb6-4ae0-a1d1-53bbbdbb2a2d}.xml
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{37974f91-9881-424d-b412-518a3b83c3c8}</destination>
+		</relationship>
+	</object>
+</objects>
