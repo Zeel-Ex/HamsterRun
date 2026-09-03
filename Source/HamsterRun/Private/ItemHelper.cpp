@@ -5,7 +5,7 @@
 #include "GameFramework/Character.h"
 #include "GameFramework/CharacterMovementComponent.h"
 
-FTimerHandle LeafBlowerTimerHandle;
+TMap<AActor*, FTimerHandle> LeafBlowerTimerHandles;
 struct FParams
 {
 	bool ToNormal = false;
@@ -87,14 +87,15 @@ void UItemHelper::ApplyBlowerForce(const FTransform& BlowerTransform, float MaxR
 						Actor->ProcessEvent(SetFriction, &Params1);
 					};
 
-					if (LeafBlowerTimerHandle.IsValid())
+					if (LeafBlowerTimerHandles.Find(Actor)->IsValid())
 					{
-						World->GetTimerManager().ClearTimer(LeafBlowerTimerHandle);
-						World->GetTimerManager().SetTimer(LeafBlowerTimerHandle, resetTimer, 1, false);
+						World->GetTimerManager().ClearTimer(*LeafBlowerTimerHandles.Find(Actor));
+						World->GetTimerManager().SetTimer(*LeafBlowerTimerHandles.Find(Actor), resetTimer, 1, false);
 					}
 					else
 					{
-						World->GetTimerManager().SetTimer(LeafBlowerTimerHandle, resetTimer, 1, false);
+						FTimerHandle TimerHandle;
+						World->GetTimerManager().SetTimer(LeafBlowerTimerHandles.Add(Actor, TimerHandle), resetTimer, 1, false);
 					}
 				}
 
