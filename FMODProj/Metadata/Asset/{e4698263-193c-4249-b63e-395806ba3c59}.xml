@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="EncodableAsset" id="{e4698263-193c-4249-b63e-395806ba3c59}">
+		<property name="assetPath">
+			<value>SFX/Items/Egg Carton/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{37974f91-9881-424d-b412-518a3b83c3c8}</destination>
+		</relationship>
+	</object>
+</objects>
