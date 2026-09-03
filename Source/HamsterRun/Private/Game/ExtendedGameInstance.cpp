@@ -4,9 +4,11 @@
 #include "Game/ExtendedGameInstance.h"
 #include "GenericPlatform/GenericPlatformInputDeviceMapper.h"
 #include "GameMapsSettings.h"
+#include "MoviePlayer.h"
 #include "GameFramework/GameMode.h"
 #include "GameFramework/InputDeviceSubsystem.h"
 #include "Interfaces/InputConnection.h"
+#include "SCharacterProfileWidget.h"
 
 void UExtendedGameInstance::Init()
 {
@@ -41,6 +43,11 @@ void UExtendedGameInstance::Init()
 		}
 	}
 	
+	// Loading Screen
+	FCoreUObjectDelegates::PreLoadMap.AddUObject(this, &UExtendedGameInstance::OnPreLoadMap);
+	FCoreUObjectDelegates::PostLoadMapWithWorld.AddUObject(this, &UExtendedGameInstance::OnPostLoadMap);
+	FWorldDelegates::OnSeamlessTravelStart.AddUObject(this, &UExtendedGameInstance::OnSeamlessTravelStart);
+
 	FSlateApplication::Get().SetAllUserFocusToGameViewport();
 }
 
@@ -132,4 +139,37 @@ void UExtendedGameInstance::CheckGamepadHardware(EInputDeviceConnectionState New
 			break;
 		}
 	}
+}
+
+void UExtendedGameInstance::OnPreLoadMap(const FString& MapName)
+{
+	UE_LOG(LogTemp, Warning, TEXT("OnPreLoadMap"));
+	if (!IsRunningDedicatedServer())
+	{
+		FLoadingScreenAttributes LoadingScreen;
+		LoadingScreen.bAutoCompleteWhenLoadingCompletes = false;
+		LoadingScreenWidget = SCharacterProfileWidget::ConstructRandom();
+		LoadingScreen.WidgetLoadingScreen = LoadingScreenWidget;
+		LoadingScreen.MinimumLoadingScreenDisplayTime = 2.0f;
+		GetMoviePlayer()->SetupLoadingScreen(LoadingScreen);
+	}
+}
+
+void UExtendedGameInstance::OnPostLoadMap(UWorld* LoadedWorld)
+{
+	UE_LOG(LogTemp, Warning, TEXT("OnPostLoadMap: %s"), *LoadedWorld->GetName());
+	if (!IsRunningDedicatedServer())
+	{
+		GetMoviePlayer()->StopMovie();
+		GEngine->GameViewport->RemoveViewportWidgetContent(LoadingScreenWidget.ToSharedRef());
+	}
+}
+
+void UExtendedGameInstance::OnSeamlessTravelStart(UWorld* CurrentWorld, const FString& LevelName)
+{
+	if (IsRunningDedicatedServer())
+		return;
+	
+	LoadingScreenWidget = SCharacterProfileWidget::ConstructRandom();
+	GEngine->GameViewport->AddViewportWidgetContent(LoadingScreenWidget.ToSharedRef(), 1000);
 }

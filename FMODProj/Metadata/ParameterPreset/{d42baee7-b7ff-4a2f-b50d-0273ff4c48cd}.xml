@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{d42baee7-b7ff-4a2f-b50d-0273ff4c48cd}">
+		<property name="name">
+			<value>Item</value>
+		</property>
+		<relationship name="folder">
+			<destination>{de856b5e-9e94-4d8d-817d-64d7e60cb317}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{b3561edf-e26f-4e0c-89e4-a7831247cb5b}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{b3561edf-e26f-4e0c-89e4-a7831247cb5b}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>3</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>NoItem</value>
+			<value>EnergyDrink</value>
+			<value>BananaBier</value>
+		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

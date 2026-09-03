@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{be9ecae9-b809-468d-ad83-cc9277812f96}">
+		<property name="assetPath">
+			<value>Music/WinnerPhase/SMM_PreWinnerAnnouncement_130BPM.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>62.076916666666669</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{37974f91-9881-424d-b412-518a3b83c3c8}</destination>
+		</relationship>
+	</object>
+</objects>
