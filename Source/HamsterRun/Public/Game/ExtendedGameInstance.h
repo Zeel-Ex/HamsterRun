@@ -67,7 +67,16 @@ public:
 	
 	void CheckGamepadHardware(EInputDeviceConnectionState NewState, const FPlatformUserId UserId,
 														   const FInputDeviceId DeviceId);
+	
+	// Loading Screen
+	
+	void OnPreLoadMap(const FString& MapName);
+	void OnPostLoadMap(UWorld* LoadedWorld);
+	void OnSeamlessTravelStart(UWorld* CurrentWorld, const FString& LevelName);
 
 private:
 	TMap<FInputDeviceId, FPlatformUserId> UserToDeviceMap;
+	
+	//Loading Screen
+	TSharedPtr<class SWidget> LoadingScreenWidget;
 };
