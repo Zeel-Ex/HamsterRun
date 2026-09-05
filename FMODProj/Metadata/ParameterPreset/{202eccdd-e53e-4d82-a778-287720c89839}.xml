@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{202eccdd-e53e-4d82-a778-287720c89839}">
+		<property name="name">
+			<value>Var</value>
+		</property>
+		<relationship name="folder">
+			<destination>{de856b5e-9e94-4d8d-817d-64d7e60cb317}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{2b82d45e-3f5a-4b7b-b3d2-994ade55db66}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{2b82d45e-3f5a-4b7b-b3d2-994ade55db66}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Var 1</value>
+			<value>Var 2</value>
+		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>
