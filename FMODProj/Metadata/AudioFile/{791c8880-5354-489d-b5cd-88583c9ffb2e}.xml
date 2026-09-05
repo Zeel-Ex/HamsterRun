@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.03.00">
-	<object class="AudioFile" id="{2100160f-bf17-4da6-99b0-d1975a995420}">
+	<object class="AudioFile" id="{791c8880-5354-489d-b5cd-88583c9ffb2e}">
 		<property name="assetPath">
-			<value>SFX/UI/UI_Accept.wav</value>
+			<value>SFX/UI/UI_Decline.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
@@ -11,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>0.52822916666666664</value>
+			<value>0.52941666666666665</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{37974f91-9881-424d-b412-518a3b83c3c8}</destination>
