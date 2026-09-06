@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.03.00">
-	<object class="AudioFile" id="{2f637000-9b30-4d53-b7e5-25fefdd5f758}">
+	<object class="AudioFile" id="{cde14a3a-5419-4c05-bffb-cca540d2c4dd}">
 		<property name="assetPath">
-			<value>SFX/Items/DishSoap/DishSoap_214-260906_1816.wav</value>
+			<value>SFX/Items/Egg Carton/Chicken_3.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
@@ -11,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>0.80322916666666666</value>
+			<value>0.74650000000000005</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{37974f91-9881-424d-b412-518a3b83c3c8}</destination>

@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{e09aea48-9d25-461e-9caf-72e1474cbdd6}">
 		<property name="assetPath">
-			<value>DishSoap_114-260906_1816.wav</value>
+			<value>SFX/Items/DishSoap/DishSoap_114-260906_1816.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
