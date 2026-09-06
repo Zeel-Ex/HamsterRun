@@ -7,4 +7,4 @@ for /f %%i in ('git -C "%PROJDIR%" rev-parse --short HEAD') do set HASH=%%i
 set INIFILE=%PROJDIR%\Config\DefaultGame.ini
 
 powershell -Command ^
-  "(Get-Content '%INIFILE%') -replace '^ProjectVersion=.*', 'ProjectVersion=0.2.0-%HASH%' | Set-Content '%INIFILE%'"
+  "(Get-Content '%INIFILE%') -replace '^ProjectVersion=.*', 'ProjectVersion=0.2.1-%HASH%' | Set-Content '%INIFILE%'"
