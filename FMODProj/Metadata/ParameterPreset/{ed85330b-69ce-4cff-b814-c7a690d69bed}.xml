@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{ed85330b-69ce-4cff-b814-c7a690d69bed}">
+		<property name="name">
+			<value>CharSetup</value>
+		</property>
+		<relationship name="folder">
+			<destination>{de856b5e-9e94-4d8d-817d-64d7e60cb317}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{45736cfd-0692-47e4-a940-ea1fde218e09}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{45736cfd-0692-47e4-a940-ea1fde218e09}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>11</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>GrannyPrepper</value>
+			<value>GrannySleepy</value>
+			<value>GrannyTheorist</value>
+			<value>PrepperSleepy</value>
+			<value>PrepperTheorist</value>
+			<value>SleepyTheorist</value>
+			<value>GrannyPrepperSleepy</value>
+			<value>GrannyPrepperTheorist</value>
+			<value>GrannySleepyTheorist</value>
+			<value>PrepperSleepyTheorist</value>
+			<value>All</value>
+		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

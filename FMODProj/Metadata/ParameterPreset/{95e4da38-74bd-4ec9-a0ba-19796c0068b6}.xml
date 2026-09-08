@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{95e4da38-74bd-4ec9-a0ba-19796c0068b6}">
+		<property name="name">
+			<value>JumpAirGrounded</value>
+		</property>
+		<relationship name="folder">
+			<destination>{de856b5e-9e94-4d8d-817d-64d7e60cb317}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{d1938d68-60c3-483c-beaa-befba0c36f68}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{d1938d68-60c3-483c-beaa-befba0c36f68}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>3</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
