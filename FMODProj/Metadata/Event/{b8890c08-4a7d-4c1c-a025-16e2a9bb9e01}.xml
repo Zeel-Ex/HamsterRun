@@ -783,6 +783,7 @@
 		</relationship>
 		<relationship name="triggerConditions">
 			<destination>{7e7301ee-b058-45da-b67f-2c2e95a38209}</destination>
+			<destination>{af2c8226-c2a4-4bf6-870d-3e51e27879ff}</destination>
 			<destination>{375d09ec-478f-4f9c-a66b-9b839d439ec0}</destination>
 		</relationship>
 	</object>
@@ -1197,6 +1198,17 @@
 		</property>
 		<property name="maximum">
 			<value>3</value>
+		</property>
+		<relationship name="parameter">
+			<destination>{45736cfd-0692-47e4-a940-ea1fde218e09}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterCondition" id="{af2c8226-c2a4-4bf6-870d-3e51e27879ff}">
+		<property name="minimum">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>1</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{45736cfd-0692-47e4-a940-ea1fde218e09}</destination>
