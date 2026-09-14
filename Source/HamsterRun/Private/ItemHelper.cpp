@@ -80,22 +80,24 @@ void UItemHelper::ApplyBlowerForce(const FTransform& BlowerTransform, float MaxR
 					FParams Params;
 					Actor->ProcessEvent(SetFriction, &Params);
 
-					const auto resetTimer = [=]()
+					const auto ResetFriction = [=]()
 					{
 						FParams Params1(true);
 
-						Actor->ProcessEvent(SetFriction, &Params1);
+						if (IsValid(Actor))
+							Actor->ProcessEvent(SetFriction, &Params1);
 					};
-
-					if (LeafBlowerTimerHandles.Find(Actor)->IsValid())
+					
+					// Set/Reset a timer to reset the friction of blown character back to normal.
+					if (FTimerHandle* ResetTimerHandle = LeafBlowerTimerHandles.Find(Actor); ResetTimerHandle && ResetTimerHandle->IsValid())
 					{
-						World->GetTimerManager().ClearTimer(*LeafBlowerTimerHandles.Find(Actor));
-						World->GetTimerManager().SetTimer(*LeafBlowerTimerHandles.Find(Actor), resetTimer, 1, false);
+						World->GetTimerManager().ClearTimer(*ResetTimerHandle);
+						World->GetTimerManager().SetTimer(*ResetTimerHandle, ResetFriction, 1, false);
 					}
 					else
 					{
 						FTimerHandle TimerHandle;
-						World->GetTimerManager().SetTimer(LeafBlowerTimerHandles.Add(Actor, TimerHandle), resetTimer, 1, false);
+						World->GetTimerManager().SetTimer(LeafBlowerTimerHandles.Add(Actor, TimerHandle), ResetFriction, 1, false);
 					}
 				}
 
