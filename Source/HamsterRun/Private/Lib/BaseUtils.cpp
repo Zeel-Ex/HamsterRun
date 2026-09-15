@@ -46,3 +46,29 @@ FString UBaseUtils::GetAppVersion()
 
 	return AppVersion;
 }
+
+bool UBaseUtils::GetActorScreenBounds(APlayerController* PC, AActor* Actor, FBox2D& OutScreenBox)
+{
+	if (!PC || !Actor) return false;
+    
+	FVector Origin, Extent;
+	Actor->GetActorBounds(false, Origin, Extent);
+    
+	OutScreenBox = FBox2D(ForceInit);
+	bool bAnyOnScreen = false;
+    
+	for (int32 x = -1; x <= 1; x += 2)
+		for (int32 y = -1; y <= 1; y += 2)
+			for (int32 z = -1; z <= 1; z += 2)
+			{
+				FVector Corner = Origin + FVector(x * Extent.X, y * Extent.Y, z * Extent.Z);
+				FVector2D ScreenPos;
+				if (PC->ProjectWorldLocationToScreen(Corner, ScreenPos))
+				{
+					OutScreenBox += ScreenPos;
+					bAnyOnScreen = true;
+				}
+			}
+    
+	return bAnyOnScreen;
+}
