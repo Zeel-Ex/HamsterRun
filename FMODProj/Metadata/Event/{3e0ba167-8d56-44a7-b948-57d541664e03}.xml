@@ -71,6 +71,9 @@
 		</relationship>
 	</object>
 	<object class="GroupTrack" id="{a90379c2-7873-4fb3-8f4c-8949a644ff2c}">
+		<relationship name="modules">
+			<destination>{6722fde3-943e-4741-ada6-0cdefdfe2c46}</destination>
+		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{8eac3f53-1e08-4947-942d-aa677631abe5}</destination>
 		</relationship>
@@ -78,6 +81,7 @@
 	<object class="Timeline" id="{065533f0-03d8-471a-861f-3a83f7de3c0c}">
 		<relationship name="modules">
 			<destination>{25127227-50e2-4cf7-a521-f079ff928ebb}</destination>
+			<destination>{6722fde3-943e-4741-ada6-0cdefdfe2c46}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{6806d46a-7781-490c-b1bc-9c03fd33cad9}">
@@ -117,6 +121,23 @@
 		</relationship>
 		<relationship name="output">
 			<destination>{6806d46a-7781-490c-b1bc-9c03fd33cad9}</destination>
+		</relationship>
+	</object>
+	<object class="CommandSound" id="{6722fde3-943e-4741-ada6-0cdefdfe2c46}">
+		<property name="start">
+			<value>0.40138113159361061</value>
+		</property>
+		<property name="length">
+			<value>0.125</value>
+		</property>
+		<property name="commandType">
+			<value>3</value>
+		</property>
+		<property name="targetValue">
+			<value>2</value>
+		</property>
+		<relationship name="commandTarget">
+			<destination>{b3561edf-e26f-4e0c-89e4-a7831247cb5b}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{8eac3f53-1e08-4947-942d-aa677631abe5}">
