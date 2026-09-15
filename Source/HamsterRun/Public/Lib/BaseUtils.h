@@ -20,4 +20,7 @@ public:
 	
 	UFUNCTION(BlueprintPure, meta = (DisplayName = "GetAppVersion"), Category = "Game Config")
 	static FString GetAppVersion();
+	
+	UFUNCTION(BlueprintCallable, Category = "Actor")
+	static bool GetActorScreenBounds(APlayerController* PC, AActor* Actor, FBox2D& OutScreenBox);
 };
