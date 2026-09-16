@@ -8,7 +8,7 @@
 			<value>ShoppingCart_Moving</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>5</value>
 		</property>
 		<relationship name="folder">
 			<destination>{9c1ec47d-8c69-4bdf-b5bc-8b4a432f3f3c}</destination>
@@ -105,6 +105,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{2ccd789b-00b0-46ed-be06-88aca5f00a75}">
+		<property name="volume">
+			<value>3</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{011bed73-8dab-45e8-8cbf-929e5dae17dc}</destination>
 		</relationship>
@@ -207,6 +210,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{0c38cca3-0d97-4843-a6a0-414123175c92}">
+		<property name="volume">
+			<value>-18.5</value>
+		</property>
 		<property name="name">
 			<value>Wheels</value>
 		</property>
@@ -224,7 +230,6 @@
 		<relationship name="effects">
 			<destination>{4c0dd946-dbe7-43a0-ac25-6efd931fbb02}</destination>
 			<destination>{d8753939-43e3-4fe7-9dd4-7cf48d17c0a5}</destination>
-			<destination>{6e19e29b-9fad-4a93-8634-ad9b526efa0b}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{f3debd5f-97c3-4a62-a874-bfc78c72a5ea}" />
@@ -282,6 +287,7 @@
 	<object class="MixerBusEffectChain" id="{8e357d87-57b5-48a3-8e57-836b945f6244}">
 		<relationship name="effects">
 			<destination>{cb834085-fe32-41f0-b78f-b5d102ae2b2b}</destination>
+			<destination>{2bfc6874-6e16-4c08-a936-b1fb2c4790cd}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{bcd430e5-d96f-4344-b310-e936de2df99b}" />
@@ -291,14 +297,6 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{d8753939-43e3-4fe7-9dd4-7cf48d17c0a5}" />
-	<object class="SpatialiserEffect" id="{6e19e29b-9fad-4a93-8634-ad9b526efa0b}">
-		<property name="panBlend">
-			<value>0.349999994</value>
-		</property>
-		<property name="userPanExtent">
-			<value>60</value>
-		</property>
-	</object>
 	<object class="AutomationCurve" id="{ac3ef99e-918c-488b-9079-d4934077b1d7}">
 		<relationship name="parameter">
 			<destination>{e67d73d7-c992-4546-88ce-0cfdb472e3c0}</destination>
@@ -373,6 +371,29 @@
 	<object class="MixerBusFader" id="{c7f824b6-b2bf-423f-8f7a-9ec9afaa757a}" />
 	<object class="MixerBusFader" id="{0445df1d-0921-498c-b86a-fa1127346d9c}" />
 	<object class="MixerBusFader" id="{cb834085-fe32-41f0-b78f-b5d102ae2b2b}" />
+	<object class="MultibandEqEffect" id="{2bfc6874-6e16-4c08-a936-b1fb2c4790cd}">
+		<property name="filterTypeA">
+			<value>4</value>
+		</property>
+		<property name="filterTypeB">
+			<value>11</value>
+		</property>
+		<property name="filterTypeE">
+			<value>13</value>
+		</property>
+		<property name="frequencyA">
+			<value>1184.88428</value>
+		</property>
+		<property name="frequencyB">
+			<value>1090.64429</value>
+		</property>
+		<property name="qualityA">
+			<value>0.591913283</value>
+		</property>
+		<property name="qualityB">
+			<value>0.50773567</value>
+		</property>
+	</object>
 	<object class="Automator" id="{4a741734-bded-49ab-add9-46c51e910e01}">
 		<property name="nameOfPropertyBeingAutomated">
 			<value>gain</value>
