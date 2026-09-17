@@ -23,4 +23,8 @@ public:
 	
 	UFUNCTION(BlueprintCallable, Category = "Actor")
 	static bool GetActorScreenBounds(APlayerController* PC, AActor* Actor, FBox2D& OutScreenBox);
+
+	// MyBlueprintFunctionLibrary.h
+	UFUNCTION(BlueprintCallable, Category = "Utility|Delegates")
+	static bool IsDispatcherBound(UObject* TargetObject, FName DispatcherName);
 };
