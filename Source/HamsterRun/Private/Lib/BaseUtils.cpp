@@ -72,3 +72,21 @@ bool UBaseUtils::GetActorScreenBounds(APlayerController* PC, AActor* Actor, FBox
     
 	return bAnyOnScreen;
 }
+
+bool UBaseUtils::IsDispatcherBound(UObject* TargetObject, FName DispatcherName)
+{
+	if (!TargetObject)
+	{
+		return false;
+	}
+
+	FMulticastDelegateProperty* DelegateProp = FindFProperty<FMulticastDelegateProperty>(TargetObject->GetClass(), DispatcherName);
+	if (!DelegateProp)
+	{
+		return false;
+	}
+
+	const void* ValuePtr = DelegateProp->ContainerPtrToValuePtr<void>(TargetObject);
+	const FMulticastScriptDelegate* ScriptDelegate = DelegateProp->GetMulticastDelegate(ValuePtr);
+	return ScriptDelegate && ScriptDelegate->IsBound();
+}
